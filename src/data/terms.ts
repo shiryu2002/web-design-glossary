@@ -303,6 +303,11 @@ import { ClaymorphismDemo } from '../components/demos/typography/ClaymorphismDem
 import { InnerShadowDemo } from '../components/demos/typography/InnerShadowDemo';
 import { RisographDemo } from '../components/demos/typography/RisographDemo';
 import { HalftoneDemo } from '../components/demos/typography/HalftoneDemo';
+import { LiquidGlassDemo } from '../components/demos/typography/LiquidGlassDemo';
+import { FrutigerAeroDemo } from '../components/demos/typography/FrutigerAeroDemo';
+import { AuroraUiDemo } from '../components/demos/typography/AuroraUiDemo';
+import { NeubrutalismDemo } from '../components/demos/typography/NeubrutalismDemo';
+import { PostMorphismDemo } from '../components/demos/typography/PostMorphismDemo';
 
 // UIパーツ
 import { ToastDemo } from '../components/demos/component/ToastDemo';
@@ -1297,6 +1302,21 @@ export const TERMS: Term[] = [
   { id: 'halftone', nameJa: 'ハーフトーン', nameEn: 'Halftone', category: 'typography',
     description: '大小の網点で濃淡を表現する印刷由来のテクスチャ。レトロ・ポップな表現。',
     Demo: HalftoneDemo, hasBeforeAfter: true },
+  { id: 'liquid-glass', nameJa: 'リキッドガラス', nameEn: 'Liquid Glass', category: 'typography',
+    description: 'Apple が iOS 26 で導入したデザイン言語。屈折・反射する流動的なガラス層で、スキューモーフィズム／フラット／グラスモーフィズムを統合した質感。',
+    Demo: LiquidGlassDemo, hasBeforeAfter: false },
+  { id: 'frutiger-aero', nameJa: 'フルティガーエアロ', nameEn: 'Frutiger Aero', category: 'typography',
+    description: '2004〜2013年頃の Web 2.0 ／ Windows Vista 風の美学。光沢ボタン・空・水・バブル・自然モチーフが特徴。',
+    Demo: FrutigerAeroDemo, hasBeforeAfter: false },
+  { id: 'aurora-ui', nameJa: 'オーロラUI', nameEn: 'Aurora UI', category: 'typography',
+    description: 'オーロラのように流動するカラフルなぼかしグラデーション背景にガラスカードを重ねるスタイル。',
+    Demo: AuroraUiDemo, hasBeforeAfter: false },
+  { id: 'neubrutalism', nameJa: 'ニューブルータリズム', nameEn: 'Neubrutalism', category: 'typography',
+    description: 'ブルータリズムを彩度高めの原色とポップな表現で再解釈した派生。太い黒枠＋オフセット影＋鮮やかな塗りが特徴。',
+    Demo: NeubrutalismDemo, hasBeforeAfter: false },
+  { id: 'post-morphism', nameJa: 'ポストモーフィズム', nameEn: 'Post-Morphism', category: 'typography',
+    description: 'スキューモーフィズム由来の奥行きや触覚的質感を、ミニマルな視覚言語に再翻訳したスタイル。柔らかい影と微妙な照明のみで素材感を示唆する。',
+    Demo: PostMorphismDemo, hasBeforeAfter: false },
 
   // ===== UIパーツ =====
   { id: 'toast', nameJa: 'トースト', nameEn: 'Toast', category: 'component',

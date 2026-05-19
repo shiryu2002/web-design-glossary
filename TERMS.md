@@ -2,7 +2,7 @@
 
 このサイトに収録されているWEBデザイン用語の一覧。AIへの指示で使うときの「正式名称」リファレンス。
 
-- 総数: **390 用語** / 6 ジャンル
+- 総数: **395 用語** / 6 ジャンル
 - 各用語の実演デモは `src/components/demos/<category>/<Name>Demo.tsx` にある
 - データソース: `src/data/terms.ts`
 
@@ -40,7 +40,7 @@ study/
 | `animation` | アニメーション | Animation | 84 |
 | `layout` | レイアウト | Layout | 75 |
 | `font` | フォント | Typography | 38 |
-| `typography` | カラー&スタイル | Color & Style | 42 |
+| `typography` | カラー&スタイル | Color & Style | 47 |
 | `component` | UIパーツ | UI Components | 93 |
 
 ## 用語データ構造（`src/types.ts`）
@@ -310,7 +310,7 @@ type Term = {
 
 ---
 
-## カラー&スタイル / Color & Style（42 用語）
+## カラー&スタイル / Color & Style（47 用語）
 
 | 英語名 | 日本語名 | 説明 |
 |---|---|---|
@@ -356,6 +356,11 @@ type Term = {
 | Inner Shadow | インナーシャドウ | 要素内側の影でへこみ表現 |
 | Risograph | リソグラフ | 版ずれ・粒状・限定色 |
 | Halftone | ハーフトーン | 大小の網点で濃淡を表現 |
+| Liquid Glass | リキッドガラス | Apple iOS 26 の屈折・反射する流動的ガラス層 |
+| Frutiger Aero | フルティガーエアロ | 2000年代 Vista 風の光沢＋空＋バブル＋自然 |
+| Aurora UI | オーロラUI | 動くオーロラ風グラデ背景＋ガラスカード |
+| Neubrutalism | ニューブルータリズム | 太黒枠＋オフセット影＋彩度高めのポップ Brutalism |
+| Post-Morphism | ポストモーフィズム | 質感や奥行きを最小限の影と照明のみで示唆 |
 
 ---
 
