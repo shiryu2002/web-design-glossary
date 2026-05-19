@@ -1,0 +1,28 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plain {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  background: var(--bg);
+  padding: 8px;
+  border-left: 2px solid var(--accent);
+}
+
+.hang {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.7;
+  background: var(--bg);
+  padding: 8px;
+  border-left: 2px solid var(--accent);
+  hanging-punctuation: first last;
+  text-indent: -0.5em;
+}

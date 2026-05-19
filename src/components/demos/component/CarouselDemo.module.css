@@ -1,0 +1,54 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.track {
+  flex: 1;
+  display: flex;
+  animation: slide 8s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0%, 18% { transform: translateX(0%); }
+  25%, 43% { transform: translateX(-100%); }
+  50%, 68% { transform: translateX(-200%); }
+  75%, 93% { transform: translateX(-300%); }
+  100% { transform: translateX(-400%); }
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  padding: 8px 0 10px;
+  background: var(--surface);
+}
+
+.dot,
+.dotActive {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.dotActive {
+  background: var(--accent);
+  width: 14px;
+  border-radius: 999px;
+}

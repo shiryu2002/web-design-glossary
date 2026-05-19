@@ -1,0 +1,34 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+  gap: 4px;
+}
+
+.alertTop {
+  background: #ff5d8f;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.field {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.error {
+  font-size: 9px;
+  color: #ff3a5b;
+  font-weight: 800;
+  padding-left: 4px;
+}

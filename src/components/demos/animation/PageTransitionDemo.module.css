@@ -1,0 +1,44 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+}
+
+.a {
+  background: linear-gradient(135deg, #5b4ee3, #8675ff);
+}
+
+.b {
+  background: linear-gradient(135deg, #ff7a59, #ffcf6f);
+  animation: pageBSwap 6s steps(1) infinite;
+}
+
+@keyframes pageBSwap {
+  0%, 49.99% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+@keyframes curtainAnim {
+  0% { transform: translateX(-100%); }
+  40%, 60% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+.curtain {
+  position: absolute;
+  inset: 0;
+  background: var(--text);
+  animation: curtainAnim 6s ease-in-out infinite;
+}

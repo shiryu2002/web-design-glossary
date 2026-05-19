@@ -1,0 +1,61 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+
+.ok {
+  border-color: #4eb87a;
+  box-shadow: 0 0 0 2px rgba(78, 184, 122, 0.15);
+}
+
+.error {
+  border-color: #d34c4c;
+  box-shadow: 0 0 0 2px rgba(211, 76, 76, 0.15);
+}
+
+.check {
+  color: #4eb87a;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.warn {
+  color: #d34c4c;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.errorText {
+  font-size: 9px;
+  color: #d34c4c;
+}

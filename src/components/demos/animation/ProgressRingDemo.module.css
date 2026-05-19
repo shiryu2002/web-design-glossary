@@ -1,0 +1,30 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-90deg);
+}
+.track {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 8;
+}
+.bar {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 201;
+  stroke-dashoffset: 201;
+  animation: drawRing 2s ease-in-out infinite;
+}
+@keyframes drawRing {
+  0% { stroke-dashoffset: 201; }
+  60%, 100% { stroke-dashoffset: 0; }
+}

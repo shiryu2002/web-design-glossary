@@ -1,0 +1,62 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wrap:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91, 78, 227, 0.12);
+}
+
+.icon {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  color: var(--text);
+  font-family: inherit;
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: var(--text-sub);
+}
+
+.input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.clear {
+  background: var(--bg);
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-sub);
+  font-size: 10px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.clear:hover {
+  background: var(--border);
+  color: var(--text);
+}

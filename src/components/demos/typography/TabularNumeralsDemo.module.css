@@ -1,0 +1,23 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 14px 30px;
+  gap: 3px;
+}
+
+.row {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.prop {
+  font-variant-numeric: proportional-nums;
+}
+
+.tab {
+  font-variant-numeric: tabular-nums;
+}

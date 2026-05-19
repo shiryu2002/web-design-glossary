@@ -1,0 +1,20 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f4d6b0, #f0c8d4);
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: 0.02em;
+}
+
+.solid {
+  color: var(--text);
+}
+
+.outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text);
+}

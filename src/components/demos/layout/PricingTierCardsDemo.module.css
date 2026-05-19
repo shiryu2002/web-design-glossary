@@ -1,0 +1,86 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  padding: 8px;
+  align-items: stretch;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
+.card.popular {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: var(--shadow-md);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: var(--accent);
+  font-size: 6px;
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 999px;
+  letter-spacing: 0.1em;
+}
+
+.name {
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 1;
+}
+
+.cur {
+  font-size: 9px;
+  vertical-align: top;
+  margin-right: 1px;
+}
+
+.feat {
+  font-size: 7px;
+  opacity: 0.85;
+  margin-top: 1px;
+}
+
+.cta {
+  margin-top: auto;
+  font-size: 8px;
+  font-weight: 700;
+  text-align: center;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.card.popular .cta {
+  background: #fff;
+  color: var(--accent);
+}

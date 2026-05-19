@@ -1,0 +1,58 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 8px 40px 1fr 28px;
+  gap: 6px;
+  padding: 5px 8px;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.row.unread .dot {
+  background: var(--accent);
+}
+
+.from {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.row.unread .from {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.subj {
+  font-size: 9px;
+  color: var(--text-sub);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.row.unread .subj {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.time {
+  font-size: 7px;
+  color: var(--text-sub);
+  text-align: right;
+}

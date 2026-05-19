@@ -1,0 +1,25 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.text {
+  font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'MS Mincho', serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: 0.08em;
+}
+
+.note {
+  font-size: 10px;
+  color: var(--text-sub);
+  letter-spacing: 0.06em;
+}

@@ -1,0 +1,35 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.solid,
+.halftone {
+  width: 140px;
+  height: 90px;
+  border-radius: 8px;
+}
+
+.solid {
+  background: linear-gradient(90deg, var(--text) 0%, var(--bg) 100%);
+}
+
+.halftone {
+  background:
+    radial-gradient(circle, var(--text) 50%, transparent 52%) 0 0/6px 6px,
+    radial-gradient(circle, var(--text) 35%, transparent 38%) 3px 3px/6px 6px;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, transparent 100%);
+          mask-image: linear-gradient(90deg, #000 0%, transparent 100%);
+}
+
+.note {
+  font-size: 10px;
+  color: var(--text-sub);
+  letter-spacing: 0.06em;
+}

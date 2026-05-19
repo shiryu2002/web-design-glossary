@@ -1,0 +1,60 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.eyebrow {
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1;
+}
+
+.sub {
+  font-size: 9px;
+  color: var(--text-sub);
+}
+
+.cta {
+  margin-top: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.visual {
+  background: linear-gradient(135deg, #ecebfd, #c9c3f5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape {
+  width: 60%;
+  aspect-ratio: 1;
+  background: var(--accent);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: var(--shadow-lg);
+}

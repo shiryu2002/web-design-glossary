@@ -1,0 +1,36 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  padding-bottom: 4px;
+}
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent);
+}
+.sweep::after {
+  width: 100%;
+  transform-origin: left;
+  animation: sweep 2.4s ease-in-out infinite;
+}
+.plain::after {
+  width: 100%;
+}
+@keyframes sweep {
+  0%, 100% { transform: scaleX(0); transform-origin: left; }
+  45% { transform: scaleX(1); transform-origin: left; }
+  55% { transform: scaleX(1); transform-origin: right; }
+  95% { transform: scaleX(0); transform-origin: right; }
+}

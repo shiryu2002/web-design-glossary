@@ -1,0 +1,33 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.positive {
+  background: #6cd49c;
+  color: #1a3a25;
+  font-size: 22px;
+  font-weight: 900;
+  padding: 10px 22px;
+  border-radius: 10px;
+}
+
+.negative {
+  background: #ff5d8f;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  padding: 10px 22px;
+  border-radius: 10px;
+}
+
+.note {
+  font-size: 9px;
+  color: var(--text-sub);
+  letter-spacing: 0.04em;
+}

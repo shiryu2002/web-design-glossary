@@ -1,0 +1,51 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  width: 130px;
+  height: 90px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.back {
+  transform: translateY(-14px) scale(0.85);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.mid {
+  transform: translateY(-7px) scale(0.92);
+  opacity: 0.85;
+  z-index: 2;
+}
+
+.front {
+  z-index: 3;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.body {
+  font-size: 8px;
+  color: var(--text-sub);
+}

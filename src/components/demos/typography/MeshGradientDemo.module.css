@@ -1,0 +1,26 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mesh {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(at 12% 18%, #ffcf6f 0%, transparent 45%),
+    radial-gradient(at 82% 22%, #ff5d8f 0%, transparent 45%),
+    radial-gradient(at 22% 82%, #6cd49c 0%, transparent 45%),
+    radial-gradient(at 80% 78%, #5b4ee3 0%, transparent 50%),
+    linear-gradient(135deg, #f4a8e0 0%, #8e7cff 100%);
+  animation: meshShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes meshShift {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(30deg); }
+}

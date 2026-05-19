@@ -1,0 +1,69 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.content {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  height: 10px;
+  background: var(--bg);
+  border-radius: 4px;
+}
+
+.row:first-child { width: 70%; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.overlayOpen {
+  opacity: 1;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  background: var(--surface);
+  padding: 14px;
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: -8px 0 20px rgba(20, 18, 16, 0.1);
+}
+
+.panelOpen {
+  transform: translateX(0);
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-sub);
+}
+
+.link {
+  font-size: 12px;
+  padding: 6px 8px;
+  background: var(--bg);
+  border-radius: 4px;
+}

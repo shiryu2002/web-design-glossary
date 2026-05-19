@@ -1,0 +1,26 @@
+.stage {
+  width: 100%;
+  padding: 16px 18px;
+}
+
+.plain {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.withCap {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.withCap::first-letter {
+  float: left;
+  font-size: 44px;
+  line-height: 0.9;
+  font-weight: 800;
+  margin: 2px 6px 0 0;
+  color: var(--accent);
+  font-family: Georgia, serif;
+}

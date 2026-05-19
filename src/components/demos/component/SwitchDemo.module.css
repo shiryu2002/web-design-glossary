@@ -1,0 +1,38 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sw {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: #c8c4ba;
+  border: none;
+  padding: 3px;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.on {
+  background: var(--accent);
+}
+
+.thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.on .thumb {
+  transform: translateX(20px);
+}

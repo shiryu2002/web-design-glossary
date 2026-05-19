@@ -1,0 +1,53 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.callout {
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid;
+  background: var(--surface);
+  font-size: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.icon {
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 10px;
+}
+
+.text {
+  color: var(--text-sub);
+  line-height: 1.4;
+  font-size: 9px;
+}
+
+.tip {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.note {
+  border-left-color: #e39b5b;
+  background: #fdf5ec;
+}

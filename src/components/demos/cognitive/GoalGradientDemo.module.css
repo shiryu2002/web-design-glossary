@@ -1,0 +1,42 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 18px;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent);
+  text-align: center;
+}
+
+.bar {
+  height: 12px;
+  background: var(--bg);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+@keyframes goalFill {
+  0%, 100% { width: 80%; }
+  50% { width: 90%; }
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #ff5d8f);
+  border-radius: 999px;
+  animation: goalFill 2.6s ease-in-out infinite;
+}
+
+.steps {
+  font-size: 10px;
+  color: var(--text-sub);
+  text-align: center;
+  font-weight: 700;
+}

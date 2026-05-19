@@ -1,0 +1,43 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  gap: 4px;
+}
+
+.input {
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.menu {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.opt {
+  font-size: 10px;
+  padding: 4px 8px;
+}
+
+.opt:first-child {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.note {
+  font-size: 9px;
+  color: var(--text-sub);
+  text-align: center;
+}

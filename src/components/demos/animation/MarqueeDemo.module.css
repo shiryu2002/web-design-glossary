@@ -1,0 +1,28 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--text);
+  color: #fff7d6;
+}
+
+.track {
+  display: flex;
+  gap: 36px;
+  padding: 0 36px;
+  white-space: nowrap;
+  animation: scroll 12s linear infinite;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.item {
+  font-size: 18px;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.33%); }
+}

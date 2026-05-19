@@ -1,0 +1,21 @@
+.stage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+.tile {
+  border-radius: 2px;
+}
+
+.tile:nth-child(1) {
+  grid-row: span 2;
+}
+
+.tile:nth-child(5) {
+  grid-column: span 2;
+}

@@ -1,0 +1,44 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, #ffcf6f 0%, #ff5d8f 50%, #5b4ee3 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass,
+.plain {
+  width: 70%;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  color: white;
+  text-align: left;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.plain {
+  background: white;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.line {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lineSub {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-top: 2px;
+}

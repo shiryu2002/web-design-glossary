@@ -1,0 +1,42 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 70%;
+}
+
+.row {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.edge {
+  background: var(--accent);
+  color: white;
+}
+
+.middle {
+  background: var(--bg);
+  color: var(--text-sub);
+  opacity: 0.55;
+}
+
+.label {
+  font-size: 9px;
+  color: var(--text-sub);
+  letter-spacing: 0.04em;
+}

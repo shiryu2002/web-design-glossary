@@ -1,0 +1,40 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.num,
+.arrow {
+  min-width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.dots {
+  color: var(--text-sub);
+  font-size: 12px;
+  padding: 0 4px;
+}

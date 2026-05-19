@@ -1,0 +1,29 @@
+.stage {
+  display: flex;
+  gap: 14px;
+  padding: 24px;
+}
+
+.block {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(91, 78, 227, 0.25);
+}
+
+@keyframes fadeLoop {
+  0%, 10% { opacity: 0; transform: translateY(8px); }
+  30%, 80% { opacity: 1; transform: translateY(0); }
+  90%, 100% { opacity: 0; transform: translateY(-8px); }
+}
+
+.fade {
+  animation: fadeLoop 3.6s ease-in-out infinite;
+  opacity: 0;
+}
+
+.instant {
+  opacity: 1;
+}

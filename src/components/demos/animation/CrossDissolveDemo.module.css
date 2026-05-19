@@ -1,0 +1,32 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+.layerA { background: var(--accent); }
+.layerB { background: #ff8aa8; }
+.cut .layerA { opacity: 1; }
+@keyframes fadeOut { 0%, 40% { opacity: 1; } 60%, 100% { opacity: 0; } }
+@keyframes fadeIn { 0%, 40% { opacity: 0; } 60%, 100% { opacity: 1; } }
+.dissolveA { animation: fadeOut 2.8s ease-in-out infinite alternate; }
+.dissolveB { animation: fadeIn 2.8s ease-in-out infinite alternate; }

@@ -1,0 +1,75 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.container {
+  container-type: inline-size;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+}
+
+.narrow { width: 110px; }
+.wide { width: 100%; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+@container (min-width: 200px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+.thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.text {
+  font-size: 7px;
+  color: var(--text-sub);
+  line-height: 1.3;
+}
+
+.label {
+  font-size: 8px;
+  color: var(--text-sub);
+  font-style: italic;
+}

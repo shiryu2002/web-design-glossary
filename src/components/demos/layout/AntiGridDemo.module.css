@@ -1,0 +1,22 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.b1 { top: 12%; left: 8%; background: var(--accent); color: #fff; transform: rotate(-8deg); font-size: 14px; }
+.b2 { top: 6%; right: 14%; background: #f4d6b0; color: #8b5e1a; transform: rotate(5deg); }
+.b3 { top: 38%; left: 32%; background: #c3d9f0; color: #2c5d8f; font-size: 18px; transform: rotate(-2deg); }
+.b4 { bottom: 18%; left: 10%; background: #d8efd0; color: #406b3e; transform: rotate(12deg); }
+.b5 { bottom: 8%; right: 8%; background: #f0c8d4; color: #8e3556; font-size: 12px; transform: rotate(-6deg); }
+.b6 { top: 52%; right: 6%; background: var(--text); color: var(--surface); transform: rotate(2deg); font-size: 9px; }

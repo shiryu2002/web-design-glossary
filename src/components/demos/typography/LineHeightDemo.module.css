@@ -1,0 +1,18 @@
+.stage {
+  width: 100%;
+  padding: 12px 18px;
+}
+
+.cramped {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.0;
+  color: var(--text);
+}
+
+.spacious {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--text);
+}

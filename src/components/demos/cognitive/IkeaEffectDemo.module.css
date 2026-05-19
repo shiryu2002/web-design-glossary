@@ -1,0 +1,52 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.avatarWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.avatar {
+  font-size: 44px;
+  background: var(--accent-soft);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools {
+  position: absolute;
+  bottom: -4px;
+  right: -16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tool {
+  font-size: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent);
+}

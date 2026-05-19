@@ -1,0 +1,39 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.track {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+.slide {
+  flex: 0 0 70%;
+  scroll-snap-align: center;
+  border-radius: 8px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.track::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}

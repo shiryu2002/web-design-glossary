@@ -1,0 +1,22 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-sub);
+}
+
+.num {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}

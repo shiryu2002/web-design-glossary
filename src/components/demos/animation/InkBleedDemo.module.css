@@ -1,0 +1,21 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f6ef;
+}
+.ink {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #221f1c 0%, #221f1c 55%, rgba(34,31,28,0) 80%);
+  filter: blur(1px);
+  animation: bleed 3s ease-out infinite;
+}
+@keyframes bleed {
+  0% { transform: scale(0.4); filter: blur(0px); }
+  60% { transform: scale(1.6); filter: blur(6px); }
+  100% { transform: scale(2.2); filter: blur(10px); opacity: 0; }
+}

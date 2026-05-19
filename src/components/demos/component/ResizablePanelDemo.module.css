@@ -1,0 +1,87 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.left {
+  width: 42%;
+  background: #faf8f3;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.right {
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.head {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-sub);
+  margin-bottom: 2px;
+}
+
+.item {
+  font-size: 9px;
+  color: var(--text);
+}
+
+.lineLong,
+.lineShort {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+}
+
+.lineShort {
+  width: 60%;
+}
+
+.gripWrap {
+  width: 6px;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: col-resize;
+  position: relative;
+}
+
+.gripWrap:hover {
+  background: var(--accent);
+}
+
+.grip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 2px 0;
+}
+
+.grip span {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: var(--text-sub);
+}

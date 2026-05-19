@@ -1,0 +1,75 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0 6px,
+    rgba(0, 0, 0, 0.02) 6px 7px
+  );
+  border-radius: var(--radius-sm);
+}
+
+.cursor {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  font-size: 14px;
+  color: var(--text);
+  transform: rotate(-10deg);
+}
+
+.menu {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px;
+  box-shadow: var(--shadow-lg);
+  min-width: 130px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: var(--text);
+  border-radius: 4px;
+}
+
+.hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.hover .shortcut {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.shortcut {
+  font-size: 9px;
+  color: var(--text-sub);
+}
+
+.sep {
+  height: 1px;
+  background: var(--border);
+  margin: 3px 4px;
+}
+
+.danger {
+  color: #d34c4c;
+}

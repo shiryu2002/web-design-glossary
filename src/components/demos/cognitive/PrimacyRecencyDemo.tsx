@@ -1,0 +1,25 @@
+import type { DemoProps } from '../../../types';
+import styles from './PrimacyRecencyDemo.module.css';
+
+const items = ['Apple', 'Bag', 'Cat', 'Dog', 'Egg', 'Fish', 'Goat'];
+
+export function PrimacyRecencyDemo(_: DemoProps) {
+  return (
+    <div className={styles.stage}>
+      <div className={styles.list}>
+        {items.map((it, i) => {
+          const isEdge = i === 0 || i === items.length - 1;
+          return (
+            <div
+              key={it}
+              className={`${styles.row} ${isEdge ? styles.edge : styles.middle}`}
+            >
+              {it}
+            </div>
+          );
+        })}
+      </div>
+      <div className={styles.label}>最初 / 最後 が記憶に残る</div>
+    </div>
+  );
+}

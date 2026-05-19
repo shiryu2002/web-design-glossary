@@ -1,0 +1,43 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.left {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+}
+
+.right {
+  position: absolute;
+  inset: 0;
+  background: #f4d6b0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.left .label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.right .label {
+  color: #8b5e1a;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,43 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track {
+  position: relative;
+  width: 70%;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+}
+.goal {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  width: 2px;
+  height: 20px;
+  background: var(--text-sub);
+}
+.box {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: var(--accent);
+}
+@keyframes overshoot {
+  0% { left: 0; }
+  60% { left: calc(100% + 6px); }
+  80% { left: calc(100% - 12px); }
+  100% { left: calc(100% - 24px); }
+}
+@keyframes linearMove {
+  0% { left: 0; }
+  100% { left: calc(100% - 24px); }
+}
+.over { animation: overshoot 1.8s cubic-bezier(.5, -0.4, .3, 1.5) infinite; }
+.linear { animation: linearMove 1.8s linear infinite; }

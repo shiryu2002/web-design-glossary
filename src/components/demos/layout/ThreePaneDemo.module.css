@@ -1,0 +1,84 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 60px 80px 1fr;
+}
+
+.folders {
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 6px 4px;
+  gap: 2px;
+}
+
+.fItem {
+  font-size: 7px;
+  padding: 3px 4px;
+  border-radius: 3px;
+  color: var(--text-sub);
+}
+
+.fItem.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.list {
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.lItem {
+  padding: 5px 6px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.lItem.sel {
+  background: var(--accent-soft);
+}
+
+.from {
+  font-size: 8px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.subj {
+  font-size: 7px;
+  color: var(--text-sub);
+}
+
+.detail {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subject {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.meta {
+  font-size: 8px;
+  color: var(--text-sub);
+  margin-bottom: 4px;
+}
+
+.line {
+  height: 3px;
+  background: #ece9e0;
+  border-radius: 2px;
+  width: 100%;
+}

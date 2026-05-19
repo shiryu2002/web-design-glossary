@@ -1,0 +1,26 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.puck {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-left: 10%;
+}
+@keyframes glide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(140px); }
+  100% { transform: translateX(220px); }
+}
+@keyframes hardStop {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(140px); }
+  21%, 100% { transform: translateX(140px); }
+}
+.inertia { animation: glide 2.2s cubic-bezier(.1, .8, .2, 1) infinite; }
+.stop { animation: hardStop 2.2s linear infinite; }

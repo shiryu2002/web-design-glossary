@@ -1,0 +1,46 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px;
+}
+
+.col, .colDecoy, .colHi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  flex: 1;
+}
+
+.colDecoy {
+  opacity: 0.5;
+}
+
+.colHi {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.name {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.price {
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.tag {
+  font-size: 8px;
+  color: var(--accent);
+  font-weight: 800;
+}

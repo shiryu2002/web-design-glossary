@@ -1,0 +1,113 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.bg,
+.placeholder {
+  position: absolute;
+  inset: 0;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dim {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 18, 16, 0.3);
+}
+
+.sheet {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  background: var(--surface);
+  box-shadow: -8px 0 24px rgba(20, 18, 16, 0.15);
+  display: flex;
+  flex-direction: column;
+  animation: slidein 0.3s ease;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.close {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.body {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: var(--text);
+}
+
+.muted {
+  color: var(--text-sub);
+}
+
+.toggle {
+  width: 22px;
+  height: 12px;
+  border-radius: 8px;
+  background: var(--accent);
+  position: relative;
+}
+
+.toggle span {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.off {
+  background: var(--border);
+}
+
+.off span {
+  right: auto;
+  left: 1px;
+}

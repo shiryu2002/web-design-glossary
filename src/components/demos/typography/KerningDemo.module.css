@@ -1,0 +1,28 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+}
+
+.tight {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.loose {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  padding-left: 0.4em;
+}
+
+.note {
+  font-size: 10px;
+  color: var(--text-sub);
+  letter-spacing: 0.04em;
+}

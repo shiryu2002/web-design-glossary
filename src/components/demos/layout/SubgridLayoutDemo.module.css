@@ -1,0 +1,61 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 4px;
+}
+
+.card {
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  padding: 5px;
+  display: grid;
+  gap: 3px;
+}
+
+.normal .card {
+  grid-template-rows: auto 1fr auto;
+}
+
+.subgrid .card {
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+}
+
+.title {
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.body {
+  font-size: 7px;
+  color: var(--text-sub);
+  line-height: 1.3;
+}
+
+.foot {
+  font-size: 7px;
+  color: var(--accent);
+  font-weight: 700;
+  padding-top: 3px;
+  border-top: 1px dashed var(--border);
+}
+
+.label {
+  font-size: 8px;
+  color: var(--text-sub);
+  text-align: center;
+}

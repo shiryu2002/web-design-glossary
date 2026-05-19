@@ -1,0 +1,65 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff8ef;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ff4f8a;
+}
+
+.zigzag {
+  position: absolute;
+  top: 28px;
+  right: 18px;
+  width: 50px;
+  height: 22px;
+  background:
+    linear-gradient(135deg, #1ec5d6 25%, transparent 25%) 0 0/8px 8px,
+    linear-gradient(225deg, #1ec5d6 25%, transparent 25%) 0 0/8px 8px;
+  background-color: transparent;
+}
+
+.bar {
+  position: absolute;
+  bottom: 30px;
+  left: 22px;
+  width: 70px;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, #2d2d2d 0 6px, #fff8ef 6px 10px);
+  transform: rotate(-12deg);
+}
+
+.tri {
+  position: absolute;
+  bottom: 18px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 28px solid #ffd23f;
+}
+
+.label {
+  font-family: 'Impact', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  color: #2d2d2d;
+  background: #fff;
+  padding: 4px 10px;
+  border: 2px solid #2d2d2d;
+  transform: rotate(-3deg);
+  z-index: 1;
+}

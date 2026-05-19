@@ -1,0 +1,53 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fbfaf7;
+  font-family: Georgia, serif;
+}
+
+.head {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 6px;
+}
+
+.kicker {
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin-top: 2px;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.line,
+.lineShort {
+  height: 4px;
+  background: var(--bg);
+  border-radius: 2px;
+}
+
+.lineShort {
+  width: 60%;
+}

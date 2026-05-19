@@ -1,0 +1,46 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.track {
+  fill: var(--accent-soft);
+  stroke: var(--border);
+  stroke-width: 4;
+}
+.fill {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 163;
+  stroke-dashoffset: 163;
+  animation: hold 2.4s ease-in-out infinite;
+}
+.label {
+  position: relative;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+@keyframes hold {
+  0% { stroke-dashoffset: 163; }
+  60%, 80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 163; }
+}

@@ -1,0 +1,41 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  flex: 1;
+  background: #5b4ee3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background: #e3d44e;
+  color: #3a2f00;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.legend {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: var(--surface);
+}
+
+.swatch {
+  flex: 1;
+  padding: 6px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px;
+}

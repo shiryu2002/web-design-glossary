@@ -1,0 +1,53 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.banner {
+  background: repeating-linear-gradient(45deg, #ff5d8f, #ff5d8f 8px, #ffcf6f 8px, #ffcf6f 16px);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+  padding: 8px;
+  opacity: 0.35;
+  filter: saturate(0.7);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.row {
+  height: 8px;
+  background: var(--bg);
+  border-radius: 3px;
+}
+
+.row:first-child { width: 80%; }
+.row:nth-child(2) { width: 60%; }
+
+@keyframes gazeMove {
+  0%, 100% { top: 50%; left: 30%; }
+  30% { top: 50%; left: 70%; }
+  50% { top: 65%; left: 70%; }
+  80% { top: 65%; left: 30%; }
+}
+
+.gaze {
+  position: absolute;
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  animation: gazeMove 6s ease-in-out infinite;
+  pointer-events: none;
+}

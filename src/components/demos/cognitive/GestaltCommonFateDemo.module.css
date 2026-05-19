@@ -1,0 +1,26 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 12px;
+  align-content: center;
+  justify-content: center;
+}
+
+@keyframes fate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-sub);
+}
+
+.moving {
+  background: var(--accent);
+  animation: fate 1.4s ease-in-out infinite;
+}

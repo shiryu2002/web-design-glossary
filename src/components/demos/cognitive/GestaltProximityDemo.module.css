@@ -1,0 +1,30 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.even {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 8px;
+}
+
+.grouped {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  gap: 8px 28px;
+}
+
+.grouped > .dot:nth-child(3n) {
+  margin-right: 0;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+}

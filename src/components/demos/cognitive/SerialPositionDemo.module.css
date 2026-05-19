@@ -1,0 +1,36 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+}
+
+.curve {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+}
+
+.list {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+}
+
+.edge {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.mid {
+  font-size: 10px;
+  color: var(--text-sub);
+  opacity: 0.45;
+}

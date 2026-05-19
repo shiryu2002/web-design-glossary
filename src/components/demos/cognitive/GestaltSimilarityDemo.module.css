@@ -1,0 +1,27 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 16px);
+  gap: 6px;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: #ff5d8f;
+}

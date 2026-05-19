@@ -1,0 +1,64 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.box {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  min-height: 96px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.text {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.handle {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2px;
+  cursor: nwse-resize;
+}
+
+.handle span {
+  display: block;
+  background: var(--text-sub);
+  opacity: 0.6;
+  height: 1px;
+}
+
+.handle span:nth-child(1) {
+  width: 3px;
+}
+
+.handle span:nth-child(2) {
+  width: 6px;
+}
+
+.handle span:nth-child(3) {
+  width: 9px;
+}

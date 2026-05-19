@@ -1,0 +1,88 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  background: var(--surface);
+  display: grid;
+  grid-template-columns: 90px 1fr;
+}
+
+.list {
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.item.active {
+  background: var(--accent-soft);
+}
+
+.avatar {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: 8px;
+  color: var(--text);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.detail {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.bigAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #8675ff);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.dName {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dSub {
+  font-size: 8px;
+  color: var(--text-sub);
+  margin-bottom: 4px;
+}
+
+.dLine {
+  height: 4px;
+  background: #ece9e0;
+  border-radius: 2px;
+  width: 100%;
+}

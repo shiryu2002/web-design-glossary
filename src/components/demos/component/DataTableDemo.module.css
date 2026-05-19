@@ -1,0 +1,90 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-size: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table th {
+  background: #faf8f3;
+  color: var(--text-sub);
+  font-weight: 600;
+  font-size: 9px;
+}
+
+.zebra {
+  background: #fbfaf6;
+}
+
+.checkCol {
+  width: 24px;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.sortAsc {
+  margin-left: 4px;
+  color: var(--accent);
+  font-size: 7px;
+}
+
+.sortDim {
+  margin-left: 4px;
+  color: var(--border);
+  font-size: 7px;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  font-size: 9px;
+  color: transparent;
+}
+
+.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.partial {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.muted {
+  color: var(--text-sub);
+}

@@ -1,0 +1,27 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
+}
+
+@keyframes slideAnim {
+  0%, 100% { transform: translateX(-200%); opacity: 0; }
+  30%, 70% { transform: translateX(0); opacity: 1; }
+}
+
+.slide {
+  animation: slideAnim 3.2s ease-out infinite;
+}

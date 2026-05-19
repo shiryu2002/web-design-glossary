@@ -1,0 +1,31 @@
+.stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn {
+  background: linear-gradient(180deg, #6e62f5, #4a3edb);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 4px 0 #2a229b, 0 8px 16px rgba(91, 78, 227, 0.3);
+}
+
+.flat {
+  color: var(--text);
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 9px;
+  color: var(--text-sub);
+}

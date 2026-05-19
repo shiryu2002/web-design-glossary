@@ -1,0 +1,60 @@
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --border: #e6e2d8;
+  --text: #221f1c;
+  --text-sub: #6b6660;
+  --accent: #5b4ee3;
+  --accent-soft: #ecebfd;
+  --shadow-sm: 0 1px 2px rgba(20, 18, 16, 0.05);
+  --shadow-md: 0 4px 14px rgba(20, 18, 16, 0.08);
+  --shadow-lg: 0 18px 48px rgba(20, 18, 16, 0.18);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN',
+    'Yu Gothic', 'Meiryo', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
