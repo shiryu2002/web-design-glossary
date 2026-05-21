@@ -5,28 +5,33 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
+  padding: 14px;
 }
 
 .row {
   display: flex;
-  gap: 12px;
-  align-items: center;
+  gap: 10px;
 }
 
-.logo {
-  font-size: 22px;
-  color: var(--accent);
+.face {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  transform: scale(0.7);
+  animation: pop 4s ease-in-out infinite;
 }
 
-.logo:nth-child(1) { opacity: 0.3; transform: scale(0.7); }
-.logo:nth-child(2) { opacity: 0.5; transform: scale(0.8); }
-.logo:nth-child(3) { opacity: 0.7; transform: scale(0.9); }
-.logo:nth-child(4) { opacity: 0.9; transform: scale(1); }
-.logo:nth-child(5) { opacity: 1; transform: scale(1.15); }
+@keyframes pop {
+  0%, 10% { opacity: 0; transform: scale(0.7); filter: grayscale(0.8); }
+  35% { opacity: 1; transform: scale(1); filter: grayscale(0); }
+  85% { opacity: 1; transform: scale(1); filter: grayscale(0); }
+  100% { opacity: 0; transform: scale(1.1); filter: grayscale(0); }
+}
 
 .label {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-sub);
-  font-weight: 700;
 }

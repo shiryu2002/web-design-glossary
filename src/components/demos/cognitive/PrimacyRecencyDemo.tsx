@@ -13,13 +13,14 @@ export function PrimacyRecencyDemo(_: DemoProps) {
             <div
               key={it}
               className={`${styles.row} ${isEdge ? styles.edge : styles.middle}`}
+              style={!isEdge ? { animationDelay: `${i * 0.15}s` } : undefined}
             >
               {it}
             </div>
           );
         })}
       </div>
-      <div className={styles.label}>最初 / 最後 が記憶に残る</div>
+      <div className={styles.label}>中間は忘れ、最初と最後が残る</div>
     </div>
   );
 }

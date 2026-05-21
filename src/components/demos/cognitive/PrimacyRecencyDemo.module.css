@@ -5,38 +5,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding: 8px;
+  gap: 8px;
+  padding: 10px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   width: 70%;
+  max-width: 200px;
 }
 
 .row {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 3px;
+  padding: 4px 10px;
+  border-radius: 4px;
   text-align: center;
 }
 
 .edge {
   background: var(--accent);
   color: white;
+  box-shadow: 0 2px 8px rgba(91, 78, 227, 0.3);
 }
 
 .middle {
   background: var(--bg);
   color: var(--text-sub);
-  opacity: 0.55;
+  animation: forget 3.6s ease-in-out infinite;
+}
+
+@keyframes forget {
+  0% { opacity: 1; color: var(--text); }
+  60% { opacity: 0.55; color: var(--text-sub); }
+  85% { opacity: 0.15; }
+  100% { opacity: 0.15; }
 }
 
 .label {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--text-sub);
   letter-spacing: 0.04em;
 }

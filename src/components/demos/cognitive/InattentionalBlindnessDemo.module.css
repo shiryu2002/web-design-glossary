@@ -1,51 +1,62 @@
 .stage {
-  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
+  position: relative;
+  background: var(--bg);
 }
 
-.main {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: white;
+.center {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  z-index: 2;
 }
 
-.bigText {
-  font-size: 28px;
+.task {
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 700;
 }
 
-.side {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+.dots {
+  display: flex;
+  gap: 8px;
 }
 
-.badge {
-  width: 16px;
-  height: 16px;
+.red {
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: #ff5d8f;
-  color: white;
-  font-size: 9px;
-  font-weight: 800;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.4;
+  background: #e23b50;
 }
 
-.label {
+.flashTL,
+.flashBR {
   position: absolute;
-  bottom: 6px;
-  font-size: 8px;
-  color: var(--text-sub);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #5b4ee3;
+  opacity: 0;
+}
+
+.flashTL {
+  top: 12%;
+  left: 12%;
+  animation: blink 4s ease-in-out infinite;
+}
+
+.flashBR {
+  bottom: 14%;
+  right: 14%;
+  animation: blink 4s ease-in-out infinite 2s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0; transform: scale(0.6); }
+  85%, 95% { opacity: 0.85; transform: scale(1); }
 }

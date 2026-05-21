@@ -5,13 +5,41 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
+  padding: 8px;
 }
 
-.svg { width: 70%; height: 60%; }
+.svg {
+  width: 80%;
+  height: 70%;
+}
+
+.c {
+  fill: none;
+  stroke-width: 3;
+  animation: spread 4s ease-in-out infinite;
+}
+
+.c1 { stroke: #0085c7; }
+.c2 { stroke: #221f1c; }
+.c3 { stroke: #e23b50; }
+.c4 { stroke: #f4c300; animation-delay: 0.2s; }
+.c5 { stroke: #2ea76f; animation-delay: 0.2s; }
+
+@keyframes spread {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: var(--shift, translate(0, 0)); }
+}
+
+.c1 { --shift: translate(-12px, -4px); }
+.c2 { --shift: translate(0, -4px); }
+.c3 { --shift: translate(12px, -4px); }
+.c4 { --shift: translate(-6px, 6px); }
+.c5 { --shift: translate(6px, 6px); }
 
 .label {
-  font-size: 9px;
+  font-size: 10px;
   color: var(--text-sub);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  text-align: center;
 }

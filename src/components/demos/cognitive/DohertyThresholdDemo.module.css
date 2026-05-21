@@ -3,56 +3,68 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   justify-content: center;
-  padding: 14px 18px;
-  gap: 6px;
+  gap: 12px;
+  padding: 18px 22px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 56px 1fr 44px;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.track {
+  height: 8px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
 }
 
 .bar {
-  position: relative;
-  height: 12px;
-  background: linear-gradient(to right, #6cd49c 0%, #ffe066 40%, #ff5d8f 100%);
+  height: 100%;
   border-radius: 999px;
 }
 
-.zone {
-  position: absolute;
-  inset: 0;
+.fast {
+  background: #2ea76f;
+  animation: fill 1.6s linear infinite;
 }
 
-.marker {
-  position: absolute;
-  top: -3px;
-  bottom: -3px;
-  width: 2px;
-  background: var(--text);
+.slow {
+  background: #d8773f;
+  animation: fill 4s linear infinite;
 }
 
-.markerLabel {
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text);
-  color: white;
-  font-size: 9px;
-  font-weight: 800;
-  padding: 1px 5px;
-  border-radius: 3px;
+@keyframes fill {
+  0% { width: 0%; }
+  60% { width: 100%; }
+  100% { width: 100%; }
 }
 
-.scale {
-  display: flex;
-  justify-content: space-between;
-  font-size: 9px;
-  font-family: 'Courier New', monospace;
-  color: var(--text-sub);
-}
-
-.title {
+.tag {
   font-size: 10px;
   font-weight: 700;
-  color: var(--text);
   text-align: center;
-  margin-top: 6px;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+.good {
+  background: #d5f0e3;
+  color: #186b4a;
+}
+
+.bad {
+  background: #f7dccb;
+  color: #8a3a13;
 }

@@ -2,27 +2,31 @@ import type { DemoProps } from '../../../types';
 import styles from './CognitiveLoadDemo.module.css';
 
 export function CognitiveLoadDemo({ mode = 'after' }: DemoProps) {
-  const heavy = mode === 'before';
+  if (mode === 'before') {
+    return (
+      <div className={styles.stage}>
+        <div className={styles.dense}>
+          {Array.from({ length: 14 }).map((_x, i) => (
+            <button
+              key={i}
+              className={styles.tinyBtn}
+              style={{ animationDelay: `${i * 0.12}s` }}
+            >
+              項目{i + 1}
+            </button>
+          ))}
+        </div>
+        <div className={styles.tag}>選択肢が多すぎ</div>
+      </div>
+    );
+  }
   return (
     <div className={styles.stage}>
-      <div className={heavy ? styles.dense : styles.minimal}>
-        {heavy ? (
-          <>
-            <div className={styles.row}>名前 *</div>
-            <div className={styles.row}>メール *</div>
-            <div className={styles.row}>電話 *</div>
-            <div className={styles.row}>住所 *</div>
-            <div className={styles.row}>勤務先 *</div>
-            <div className={styles.row}>役職 *</div>
-            <div className={styles.row}>備考</div>
-          </>
-        ) : (
-          <>
-            <div className={styles.row}>メール</div>
-            <div className={styles.row}>パスワード</div>
-          </>
-        )}
+      <div className={styles.sparse}>
+        <button className={styles.primary}>主アクション</button>
+        <button className={styles.sub}>後で</button>
       </div>
+      <div className={styles.tagOk}>判断負荷 小</div>
     </div>
   );
 }
