@@ -19,6 +19,12 @@ npm run build    # 型チェック + 本番ビルド
 
 **全用語のカタログは [TERMS.md](./TERMS.md) を参照。** Claudeなどに作業を依頼する前に、まずこのファイルを開いて構造を把握すること。
 
+**Demoコンポーネントの実装ルールは [DESIGN.md](./DESIGN.md) を参照。** 新規Demo追加や複数Demo一括実装をサブエージェントに依頼するときの共通仕様（CSS変数、テンプレート、サンプルコード、TypeScript制約、委託時のチェックリスト）をまとめている。
+
+**新規用語の追加手順は [SUBMIT.md](./SUBMIT.md) を参照。** 未収録判定 → 実装 → terms.ts更新 → ビルド → push までの一連のフロー。Claudeに「SUBMIT.md見て進めて」と一言で指示すれば自走可能。
+
+**Claudeが作業を始める前の索引は [CLAUDE.md](./CLAUDE.md) を参照。** プロジェクト構造と各ドキュメントの役割をまとめている。
+
 技術スタック:
 - Vite + React 18 + TypeScript
 - CSS Modules（外部UI・アニメーションライブラリは未使用）
