@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { CATEGORIES, type Category, type Term } from './types';
 import { TERMS } from './data/terms';
 import { Tabs } from './components/Tabs';
@@ -7,10 +7,55 @@ import { TermGrid } from './components/TermGrid';
 import { TermModal } from './components/TermModal';
 import styles from './App.module.css';
 
+const TERM_BY_ID = new Map(TERMS.map((t) => [t.id, t]));
+
+function readTermIdFromUrl(): string | null {
+  if (typeof window === 'undefined') return null;
+  return new URLSearchParams(window.location.search).get('t');
+}
+
+function writeTermIdToUrl(id: string | null) {
+  const url = new URL(window.location.href);
+  if (id) {
+    if (url.searchParams.get('t') === id) return;
+    url.searchParams.set('t', id);
+  } else {
+    if (!url.searchParams.has('t')) return;
+    url.searchParams.delete('t');
+  }
+  window.history.pushState({}, '', url);
+}
+
 export default function App() {
-  const [activeCategory, setActiveCategory] = useState<Category>('cognitive');
-  const [selectedTerm, setSelectedTerm] = useState<Term | null>(null);
+  const [activeCategory, setActiveCategory] = useState<Category>(() => {
+    const id = readTermIdFromUrl();
+    return (id && TERM_BY_ID.get(id)?.category) || 'cognitive';
+  });
+  const [selectedTerm, setSelectedTerm] = useState<Term | null>(() => {
+    const id = readTermIdFromUrl();
+    return (id && TERM_BY_ID.get(id)) || null;
+  });
   const [query, setQuery] = useState('');
+
+  const handleSelect = useCallback((term: Term | null) => {
+    setSelectedTerm(term);
+    writeTermIdToUrl(term?.id ?? null);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    handleSelect(null);
+  }, [handleSelect]);
+
+  useEffect(() => {
+    const sync = () => {
+      const id = readTermIdFromUrl();
+      const term = id ? TERM_BY_ID.get(id) ?? null : null;
+      setSelectedTerm(term);
+      if (term) setActiveCategory(term.category);
+    };
+    window.addEventListener('popstate', sync);
+    return () => window.removeEventListener('popstate', sync);
+  }, []);
 
   const searching = query.trim().length > 0;
 
@@ -86,12 +131,12 @@ export default function App() {
             <div className={styles.emptySub}>「{query}」に一致するものは見つかりませんでした</div>
           </div>
         ) : (
-          <TermGrid terms={visibleTerms} onSelect={setSelectedTerm} />
+          <TermGrid terms={visibleTerms} onSelect={handleSelect} />
         )}
       </main>
 
       {selectedTerm && (
-        <TermModal term={selectedTerm} onClose={() => setSelectedTerm(null)} />
+        <TermModal term={selectedTerm} onClose={handleClose} />
       )}
 
       <footer className={styles.footer}>
